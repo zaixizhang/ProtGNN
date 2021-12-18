@@ -1,5 +1,7 @@
 # ProtGNN
 Official implementation of AAAI'22 paper "ProtGNN: Towards Self-Explaining Graph Neural Networks" (https://arxiv.org/abs/2112.00911)
+<div align=center><img src="https://github.com/zaixizhang/ProtGNN/blob/main/protgnn.png" width="700"/></div>
+The code is based on the Pytorch implementation of [[DIG]](https://github.com/divelab/DIG)
 
 ## Requirements
 ```

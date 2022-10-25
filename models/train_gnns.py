@@ -455,9 +455,9 @@ def save_best(ckpt_dir, epoch, gnnNets, model_name, eval_acc, is_best):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='PyTorch implementation of ProtGNN')
-    parser.add_argument('--clst', type=float, default=0.10,
+    parser.add_argument('--clst', type=float, default=0.0,
                         help='cluster')
-    parser.add_argument('--sep', type=float, default=0.05,
+    parser.add_argument('--sep', type=float, default=0.0,
                         help='separation')
     args = parser.parse_args()
     train_GC(args.clst, args.sep)

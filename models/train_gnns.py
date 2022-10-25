@@ -181,7 +181,7 @@ def train_GC(clst, sep):
             cluster_cost = torch.mean(torch.min(min_distances[prototypes_of_correct_class].reshape(-1, model_args.num_prototypes_per_class), dim=1)[0])
 
             #seperation loss
-            separation_cost = -torch.mean(torch.min(min_distances[~prototypes_of_wrong_class].reshape(-1, (output_dim-1)*model_args.num_prototypes_per_class), dim=1)[0])
+            separation_cost = -torch.mean(torch.min(min_distances[~prototypes_of_correct_class].reshape(-1, (output_dim-1)*model_args.num_prototypes_per_class), dim=1)[0])
 
             #sparsity loss
             l1_mask = 1 - torch.t(gnnNets.model.prototype_class_identity).to(model_args.device)
